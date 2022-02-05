@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mint.js",
+  "scripts": {
+    "mint": "nodemon mint.js",
+    "interval": "nodemon interval.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "evm-bn": "^1.1.1",
+    "set-interval-async": "^2.0.3",
+    "web3": "^1.6.1"
+  }
+}

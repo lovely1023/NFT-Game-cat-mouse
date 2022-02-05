@@ -1,0 +1,8 @@
+.root {
+    border-radius: 10px;
+  }
+
+  .root :global .alert-hidden {
+    opacity: 0;
+    transition: all 250ms linear 2s;
+  }

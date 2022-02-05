@@ -1,0 +1,305 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: CnM
+    network: rinkeby
+    source:
+      address: "0x1C2699178121e79ac9AA125507D86699597ABBd8"
+      abi: CnM
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - CatBurned
+        - CatMinted
+        - CatStaked
+        - CatStolen
+        - CatUnStaked
+        - CrazyCatLadyBurned
+        - CrazyCatLadyMinted
+        - CrazyCatLadyStaked
+        - CrazyCatLadyStolen
+        - CrazyCatLadyUnStaked
+        - MouseBurned
+        - MouseMinted
+        - MouseStaked
+        - MouseStolen
+        - MouseUnStaked
+        - OwnershipTransferred
+        - Paused
+        - RollChanged
+        - TestTokenMinted
+        - TokenMinted
+        - Transfer
+        - Unpaused
+      abis:
+        - name: CnM
+          file: ./abis/CnM.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: CatBurned(indexed uint256,uint256,uint256)
+          handler: handleCatBurned
+        - event: CatMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCatMinted
+        - event: CatStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCatStaked
+        - event: CatStolen(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCatStolen
+        - event: CatUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCatUnStaked
+        - event: CrazyCatLadyBurned(indexed uint256,uint256,uint256)
+          handler: handleCrazyCatLadyBurned
+        - event: CrazyCatLadyMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCrazyCatLadyMinted
+        - event: CrazyCatLadyStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCrazyCatLadyStaked
+        - event: CrazyCatLadyStolen(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCrazyCatLadyStolen
+        - event: CrazyCatLadyUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCrazyCatLadyUnStaked
+        - event: MouseBurned(indexed uint256,uint256,uint256)
+          handler: handleMouseBurned
+        - event: MouseMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMouseMinted
+        - event: MouseStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMouseStaked
+        - event: MouseStolen(indexed uint256,indexed address,uint256,uint256)
+          handler: handleMouseStolen
+        - event: MouseUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMouseUnStaked
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Paused(address)
+          handler: handlePaused
+        - event: RollChanged(indexed address,uint256,uint8)
+          handler: handleRollChanged
+        - event: TestTokenMinted(indexed address,indexed uint256)
+          handler: handleTestTokenMinted
+        - event: TokenMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleTokenMinted
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: Unpaused(address)
+          handler: handleUnpaused
+      file: ./src/mapping-cnm.ts
+  - kind: ethereum
+    name: CnMCheddar
+    network: rinkeby
+    source:
+      address: "0x04F3DB46a55FC1406bffFE3c2d78263aec78eefd"
+      abi: CnM
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - CatBurned
+        - CatMinted
+        - CatStaked
+        - CatStolen
+        - CatUnStaked
+        - CrazyCatLadyBurned
+        - CrazyCatLadyMinted
+        - CrazyCatLadyStaked
+        - CrazyCatLadyStolen
+        - CrazyCatLadyUnStaked
+        - MouseBurned
+        - MouseMinted
+        - MouseStaked
+        - MouseStolen
+        - MouseUnStaked
+        - OwnershipTransferred
+        - Paused
+        - RollChanged
+        - TestTokenMinted
+        - TokenMinted
+        - Transfer
+        - Unpaused
+      abis:
+        - name: CnM
+          file: ./abis/CnM.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: CatBurned(indexed uint256,uint256,uint256)
+          handler: handleCatBurned
+        - event: CatMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCatMinted
+        - event: CatStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCatStaked
+        - event: CatStolen(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCatStolen
+        - event: CatUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCatUnStaked
+        - event: CrazyCatLadyBurned(indexed uint256,uint256,uint256)
+          handler: handleCrazyCatLadyBurned
+        - event: CrazyCatLadyMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCrazyCatLadyMinted
+        - event: CrazyCatLadyStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCrazyCatLadyStaked
+        - event: CrazyCatLadyStolen(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCrazyCatLadyStolen
+        - event: CrazyCatLadyUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleCrazyCatLadyUnStaked
+        - event: MouseBurned(indexed uint256,uint256,uint256)
+          handler: handleMouseBurned
+        - event: MouseMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMouseMinted
+        - event: MouseStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMouseStaked
+        - event: MouseStolen(indexed uint256,indexed address,uint256,uint256)
+          handler: handleMouseStolen
+        - event: MouseUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMouseUnStaked
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Paused(address)
+          handler: handlePaused
+        - event: RollChanged(indexed address,uint256,uint8)
+          handler: handleRollChanged
+        - event: TestTokenMinted(indexed address,indexed uint256)
+          handler: handleTestTokenMinted
+        - event: TokenMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleTokenMinted
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: Unpaused(address)
+          handler: handleUnpaused
+      file: ./src/mapping-cnm.ts
+  - kind: ethereum
+    name: House
+    network: rinkeby
+    source:
+      address: "0x0507f38951C8FCF10E74D3F23CaBFc886138FeD2"
+      abi: House
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - MansionBurned
+        - MansionMinted
+        - MansionStaked
+        - MansionStolen
+        - MansionUnStaked
+        - OwnershipTransferred
+        - Paused
+        - RanchBurned
+        - RanchMinted
+        - RanchStaked
+        - RanchStolen
+        - RanchUnStaked
+        - ShackBurned
+        - ShackMinted
+        - ShackStaked
+        - ShackStolen
+        - ShackUnStaked
+        - TestTokenMinted
+        - TokenMinted
+        - Transfer
+        - Unpaused
+      abis:
+        - name: House
+          file: ./abis/House.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: MansionBurned(indexed uint256,uint256,uint256)
+          handler: handleMansionBurned
+        - event: MansionMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMansionMinted
+        - event: MansionStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMansionStaked
+        - event: MansionStolen(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMansionStolen
+        - event: MansionUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleMansionUnStaked
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Paused(address)
+          handler: handlePaused
+        - event: RanchBurned(indexed uint256,uint256,uint256)
+          handler: handleRanchBurned
+        - event: RanchMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleRanchMinted
+        - event: RanchStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleRanchStaked
+        - event: RanchStolen(indexed address,indexed uint256,uint256,uint256)
+          handler: handleRanchStolen
+        - event: RanchUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleRanchUnStaked
+        - event: ShackBurned(indexed uint256,uint256,uint256)
+          handler: handleShackBurned
+        - event: ShackMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleShackMinted
+        - event: ShackStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleShackStaked
+        - event: ShackStolen(indexed address,indexed uint256,uint256,uint256)
+          handler: handleShackStolen
+        - event: ShackUnStaked(indexed address,indexed uint256,uint256,uint256)
+          handler: handleShackUnStaked
+        - event: TestTokenMinted(indexed address,indexed uint256)
+          handler: handleTestTokenMinted
+        - event: TokenMinted(indexed address,indexed uint256,uint256,uint256)
+          handler: handleTokenMinted
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: Unpaused(address)
+          handler: handleUnpaused
+      file: ./src/mapping-house.ts
+  - kind: ethereum
+    name: Habitat
+    network: rinkeby
+    source:
+      address: "0x996863a1d07838793A1CB29C6d18715BC956d370"
+      abi: Habitat
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - CatClaimed
+        - CrazyCatLadyClaimed
+        - HouseClaimed
+        - MouseClaimed
+        - OwnershipTransferred
+        - Paused
+        - TokenStaked
+        - Unpaused
+      abis:
+        - name: Habitat
+          file: ./abis/Habitat.json
+      eventHandlers:
+        - event: CatClaimed(indexed uint256,indexed bool,uint256)
+          handler: handleCatClaimed
+        - event: CrazyCatLadyClaimed(indexed uint256,indexed bool,uint256)
+          handler: handleCrazyCatLadyClaimed
+        - event: HouseClaimed(indexed uint256,indexed bool,uint256)
+          handler: handleHouseClaimed
+        - event: MouseClaimed(indexed uint256,indexed bool,uint256)
+          handler: handleMouseClaimed
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Paused(address)
+          handler: handlePaused
+        - event: TokenStaked(indexed address,indexed uint256,uint8,uint256)
+          handler: handleTokenStaked
+        - event: Unpaused(address)
+          handler: handleUnpaused
+      file: ./src/mapping-habitat.ts

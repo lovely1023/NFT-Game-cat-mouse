@@ -1,0 +1,45 @@
+/* eslint-disable no-underscore-dangle */
+export const __prod__ = process.env.NODE_ENV === 'production';
+
+export const CONTRACT_ADDRESS = process.env.REACT_APP_SC_ADDRESS || '0xf7933fb707e79256aB449D53F8bF86561cCc4dFD';
+
+export const NETWORK_CHAIN_IDS = {
+  mainnet: 1,
+  ropsten: 3,
+  rinkeby: 4,
+  goerli: 5,
+  kovan: 42,
+  localhost: 1337,
+};
+
+// TEST NET
+export const ALCHEMY_ID = '0dfacdfb826644cda2ee5d402d8cfef8';
+export const ALCHEMY_ENDPOINT = 'https://eth-rinkeby.alchemyapi.io/v2/3uqkN88pOxbX1X3Psw2xbRxpymmWXJQ6';
+
+// Traits deployed to: 0xEab70BbEc7814e44eD7c5Cf796c866Eb01309Bae
+// HouseTraits deployed to: 0xBe6826fE629caFB3C54623aF1A0cf514A2403010
+// Habitat deployed to: 0x996863a1d07838793A1CB29C6d18715BC956d370
+// RandomGenerator deployed to: 0x69D65EA814AAB02A3501F43028eC6A28cFD05425
+// CnM deployed to: 0x104c7adE921b3C0B35c5f37C8BA5e6492d10e281
+// House deployed to: 0x0507f38951C8FCF10E74D3F23CaBFc886138FeD2
+// CHEDDAR deployed to: 0x95F62926c2335ADbB97F4C59253b16c45b253e6B
+// CnMGame deployed to: 0x1099f942eE92156c2F29e8aCdD777Ac22e95Adb5
+// HouseGame deployed to: 0x8451453aBB5ACDBF63Db821668A070F14787d7Fe
+
+// CnMCheddar deployed to: 0x0436DFCe1D3f3B973B7E6Bf9bbcDdBa3726Ba751
+// Traits deployed to: 0x40106F72223216f25d57971905E6be8bFE2b4e4B
+export const _OLDCNM = "0x1A1AE43Cd3533254474A5feE5CC37BA66D3612ee";
+export const _TRAITS = "0xb681CF70DE3207627ab2c37bD93c62c339579caA";
+export const _HOUSETRAITS = "0xBe6826fE629caFB3C54623aF1A0cf514A2403010";
+export const _HABITAT = "0x996863a1d07838793A1CB29C6d18715BC956d370";
+export const _RANDOM_GEN = "0x69D65EA814AAB02A3501F43028eC6A28cFD05425";
+export const _CNM = "0x04F3DB46a55FC1406bffFE3c2d78263aec78eefd";
+export const _HOUSE = "0x0507f38951C8FCF10E74D3F23CaBFc886138FeD2";
+export const _CHEDDAR = "0x95F62926c2335ADbB97F4C59253b16c45b253e6B";
+export const _CNMGAME = "0x1099f942eE92156c2F29e8aCdD777Ac22e95Adb5";
+export const _HOUSEGAME = "0x8451453aBB5ACDBF63Db821668A070F14787d7Fe";
+
+export const APPROVE_AMOUNT = '115792089237316195423570985008687907853269984665640564039457584007913129639935'; //(2^256 - 1 )
+export const MIN_PRICE = 0.088;
+export const MAX_PRICE = 0.42069;
+export const PRICE_DECEREMENT_AMOUNT = 0.001;

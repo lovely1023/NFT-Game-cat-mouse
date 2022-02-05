@@ -1,0 +1,72 @@
+enum TokenType {
+  TOKEN_TYPE_MOUSE
+  TOKEN_TYPE_CAT
+  TOKEN_TYPE_CATCRAZYLADY
+  TOKEN_TYPE_HOUSE_MANSION
+  TOKEN_TYPE_HOUSE_RANCH
+  TOKEN_TYPE_HOUSE_SHACK
+}
+
+type TokenEntity @entity {
+  id: ID!
+  tokens: [Token!]! @derivedFrom(field: "tokenEntity")
+}
+
+# Token Detail
+type Token @entity {
+  id: ID!
+  type: TokenType!
+  staked: Boolean!
+  claimed: BigDecimal!
+  tokenEntity: TokenEntity! # This is the ID String of the TokenEntity
+}
+
+# Global Status
+type StatisEntity @entity {
+  id: ID! #Just using 0x01 as I only need one store
+  
+  catMinted: BigInt!
+  crazyCatLadyMinted: BigInt!
+  mouseMinted: BigInt!
+
+  catStolen: BigInt!
+  crazyCatLadyStolen: BigInt!
+  mouseStolen: BigInt!
+
+  catBurned: BigInt!
+  crazyCatLadyBurned: BigInt!
+  mouseBurned: BigInt!
+
+  catStaked: BigInt!
+  crazyCatLadyStaked: BigInt!
+  mouseStaked: BigInt!
+
+  shackMinted: BigInt!
+  ranchMinted: BigInt!
+  mansionMinted: BigInt!
+
+  shackStolen: BigInt!
+  ranchStolen: BigInt!
+  mansionStolen: BigInt!
+
+  shackBurned: BigInt!
+  ranchBurned: BigInt!
+  mansionBurned: BigInt!
+
+  shackStaked: BigInt!
+  ranchStaked: BigInt!
+  mansionStaked: BigInt!
+
+  totalStolenByCat: BigInt!
+  totalStolenByCrazyCat: BigInt!
+}
+
+# Log Entity
+type LogEntity @entity {
+   id: ID!
+
+   owner: String!
+   event: String! # event name: ex; MouseMinted
+   time: String! # time ex; 12/22/2021 23:23:23
+   token: Token # Refers to the token
+}

@@ -1,0 +1,38 @@
+.root {
+    border-radius: 10px;
+  }
+
+  .root :global .ant-modal {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .root :global .ant-modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .root :global .ant-modal-body {
+    padding: 20px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+  .root :global .ant-modal-header {
+    padding: 16px;
+    line-height: 30px;
+    background: transparent;
+  }
+  .root :global .text-center {
+      text-align: center;
+      line-height: 50px;
+  }
+  .root :global img {
+    max-width: 250px;
+    margin-right: -60px;
+  }

@@ -1,0 +1,17 @@
+{
+  "name": "Crazycatlady",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ VigorousDeveloper/Crazycatlady",
+    "create-local": "graph create --node http://localhost:8020/ VigorousDeveloper/Crazycatlady",
+    "remove-local": "graph remove --node http://localhost:8020/ VigorousDeveloper/Crazycatlady",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 VigorousDeveloper/Crazycatlady"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.25.1",
+    "@graphprotocol/graph-ts": "0.24.1",
+    "assemblyscript-json": "^1.1.0"
+  }
+}
